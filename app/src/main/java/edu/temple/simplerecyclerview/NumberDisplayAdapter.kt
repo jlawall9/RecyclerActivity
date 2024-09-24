@@ -22,7 +22,8 @@ class NumberDisplayAdapter (private val numbers: IntArray ) : RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.textView.text = numbers[position].toString()
+        holder.textView.textSize = numbers[position].toFloat()
     }
 
 
