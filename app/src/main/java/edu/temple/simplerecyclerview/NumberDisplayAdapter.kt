@@ -10,10 +10,15 @@ class NumberDisplayAdapter (private val numbers: IntArray ) : RecyclerView.Adapt
 
     class NumberViewHolder (val textView: TextView) : RecyclerView.ViewHolder (textView) {}
 
-    private val
+    //private val
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
-
+        return NumberViewHolder (
+            TextView(parent.context).apply {
+                //layoutParams = ViewGroup.LayoutParams(300,100)
+                setPadding(5,5,5,5)
+            }
+        )
     }
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
